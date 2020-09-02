@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  Flask:
+    build: ./Flask
+    container_name: Flask
+    restart: always
+    environment:
+      - APP_NAME=MyFlaskApp
+    expose:
+      - 8080
+
+  nginx:
+    build: ./nginx
+    contianer_name: nginx
+    restart: always
+    ports:
+      - "80:80" #host:container port
+
