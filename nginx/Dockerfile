@@ -1,6 +1,9 @@
 #install nginx image
-from nginx:alpine
+FROM nginx:latest
+#FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
+
 #remove default nginx.conf
-RUN rm /etc/nginx/conf.d/default.conf
+#RUN rm /etc/nginx/conf.d/default.conf
+
 #Copy our nginx.conf
-COPY nginx.conf /etc/nginx/conf.d/
+COPY default.conf /etc/nginx/conf.d/default.conf
