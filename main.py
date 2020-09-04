@@ -4,7 +4,7 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-from Flask.app import application
+from flask.app import application
 
 #def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -12,8 +12,9 @@ from Flask.app import application
 
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
+#if __name__ == '__main__':
     #print_hi('PyCharm')
-    application.run(host='127.0.0.1', debug=True, port=8000)
+    #application.run(host='127.0.0.1', debug=True, port=8000)
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

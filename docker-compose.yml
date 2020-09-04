@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   flask:
-    build: ./Flask
+    build: ./flask
     container_name: flask
     restart: always
     environment:
@@ -16,4 +16,6 @@ services:
     restart: always
     ports:
       - "8000:80" #host:container port
+    depends_on:
+      - flask
 
