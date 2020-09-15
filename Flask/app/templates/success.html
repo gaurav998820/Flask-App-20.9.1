@@ -8,9 +8,9 @@
 <body>
 <div class="container">
     <h1>success response</h1>
-    <form action = "{{url_for('success')}}" method="post">
+    <form action = "{{url_for('success')}}" method="">
         <label> Factorial:</label>
-        <input title="Factorial" placeholder="Enter Number" width="200px" type="number" min="1" max="20" name="factorial_number">
+        <input title="Factorial" placeholder="Enter Number" width="200px" type="number" min="1" max="20" name="factorial_number"><br><br>
         <button type="submit">Submit</button><br><br>
         <output> Results:</output><br>
       <h> Factorial {{factorial_number}} = {{result}}</h>

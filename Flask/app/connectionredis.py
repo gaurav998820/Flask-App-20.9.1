@@ -39,7 +39,8 @@ def factorial_cache(num):
         return fac_result
     else:
         print('setting cache result for', number)
-        r.hsetnx('factorial','number','fac_result')
+        r.hset('factorial','number','fac_result')
+        print('setting block factorial result-->',r.hget('factorial','number'))
         print('in setting cache block-->',r.hgetall('factorial'))
         return fac_result
 

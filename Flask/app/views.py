@@ -1,4 +1,4 @@
-from app import app
+from Flask.app import app
 from flask import render_template,request,redirect
 from Flask.app import factorial
 from Flask.app import connectionredis
@@ -26,3 +26,10 @@ def success():
         print('in view get all cache data', connectionredis.r.hgetall('factorial'))
         factorial_result = connectionredis.factorial_cache(number)
         return render_template("success.html",result=factorial_result,factorial_number=number)
+    else:
+        number = int(request.args.get('factorial_number'))
+        print('in views factorial for number:-', number)
+        # factorial_result = factorial.factorial(number)
+        print('in view get all cache data', connectionredis.r.hgetall('factorial'))
+        factorial_result = connectionredis.factorial_cache(number)
+        return render_template("success.html", result=factorial_result, factorial_number=number)
