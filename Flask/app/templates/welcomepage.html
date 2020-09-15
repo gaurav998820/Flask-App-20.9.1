@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/main.css" rel="stylesheet">
+    <title>Factorial Calculation</title>
+</head>
+<body>
+<div class="container">
+    <h1>factorial Calculations</h1>
+    <form action = "{{url_for('success')}}" method="post">
+        <label> Factorial:</label>
+        <input title="Factorial" placeholder="Enter Number" width="200px" type="number" min="1" max="20" name="factorial_number">
+        <button type="submit">Submit</button><br><br>
+        <output> Results:</output>
+    </form>
+</div>
+</body>
+</html>
