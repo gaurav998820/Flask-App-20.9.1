@@ -21,6 +21,8 @@ def welcomepage():
 def success():
     if request.method == 'POST':
         number = int(request.form['factorial_number'])
-        print('in views factorial for number:', number)
-        print('in view get all cache data',)
-    return render_template("index.html",content=name)
+        print('in views factorial for number:-', number)
+        #factorial_result = factorial.factorial(number)
+        print('in view get all cache data', connectionredis.r.hgetall('factorial'))
+        factorial_result = connectionredis.factorial_cache(number)
+        return render_template("success.html",result=factorial_result,factorial_number=number)
