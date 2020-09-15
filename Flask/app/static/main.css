@@ -1,0 +1,16 @@
+<html>
+<head>
+<style>
+h1 {test-align : center;}
+p{test-align : center;}
+div{test-align : center;}
+</style>
+</head>
+<body>
+<style>
+background-color: #0066666;
+</style>
+</body>
+.container{
+background-color: #0066666;
+}
